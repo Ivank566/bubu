@@ -1,0 +1,122 @@
+@import "./blocks/mixins";
+
+.icon {
+    display: inline-flex;
+}
+
+.instagram {
+    background: url('/img/icons/instagram.svg') center/contain no-repeat;
+    @include svg-icon(20rem, 20rem);
+}
+.youtube {
+    background: url('/img/icons/youtube.svg') center/contain no-repeat;
+    @include svg-icon(26rem, 18rem);
+}
+.facebook {
+    background: url('/img/icons/facebook.svg') center/contain no-repeat;
+    @include svg-icon(12rem, 20rem);
+}
+
+.user {
+    background: url('/img/icons/user.svg') center/contain no-repeat;
+    @include svg-icon(22rem, 22rem);
+}
+
+.menu {
+    background: url('/img/icons/menu.svg') center/contain no-repeat;
+    @include svg-icon(24rem, 16rem);
+}
+
+.comparison {
+    background: url('/img/icons/сomparison.svg') center/contain no-repeat;
+    @include svg-icon(30rem, 28rem);
+}
+
+.favourite {
+    background: url('/img/icons/favorite.svg') center/contain no-repeat;
+    @include svg-icon(25rem, 22rem);
+}
+
+.cart {
+    background: url('/img/icons/cart.svg') center/contain no-repeat;
+    @include svg-icon(27rem, 22rem);
+}
+
+.search {
+    background: url('/img/icons/search.svg') center/contain no-repeat;
+    @include svg-icon(17rem, 17rem);
+    display: flex;
+}
+
+.favourite-pink {
+    background: url('/img/icons/favorite-pink.svg') center/contain no-repeat;
+    @include svg-icon(25rem, 22rem);
+}
+
+.comparison-grey {
+    background: url('/img/icons/сomparison-grey.svg') center/contain no-repeat;
+    @include svg-icon(30rem, 28rem);
+}
+
+.single-star {
+    background: url('/img/icons/single-star.svg') center/contain no-repeat;
+    @include svg-icon(19rem, 19rem);
+}
+
+.arrow-right {
+    background: url('/img/icons/right.svg') center/contain no-repeat;
+    @include svg-icon(60rem, 60rem);
+
+    @include desktop {
+        padding: 0rem 30rem;
+    }
+    @include laptop {
+        padding: 0rem 20rem;
+    }
+    @include tablet {
+        @include svg-icon(50rem, 50rem);
+        padding: 0rem 13rem;
+    }
+    @include mobile {
+        padding: 0rem 25rem;
+    }
+}
+
+.arrow-left {
+    background: url('/img/icons/right.svg') center/contain no-repeat;
+    @include svg-icon(60rem, 60rem);
+    transform: rotate(180deg);
+
+    @include desktop {
+        padding: 0rem 10rem;
+    }
+    @include laptop {
+        padding: 0rem 15rem;
+    }
+    @include tablet {
+        @include svg-icon(50rem, 50rem);
+        padding: 0rem 10rem;
+    }
+}
+
+
+
+.location {
+    background: url('/img/icons/location.svg') center/contain no-repeat;
+    @include svg-icon(13rem, 18rem);
+}
+
+.full-star{
+    background: url('/img/icons/single-star.svg') center/contain no-repeat;
+    @include svg-icon(16rem, 16rem);
+}
+
+.star{
+    background: url('/img/icons/star.svg') center/contain no-repeat;
+    @include svg-icon(16rem, 16rem);
+}
+
+.promotion-btn{
+    background: url('/img/icons/promotion-btn.svg') center/contain no-repeat;
+    @include svg-icon(58rem, 58rem);
+}

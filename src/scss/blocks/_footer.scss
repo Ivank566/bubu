@@ -1,0 +1,336 @@
+.footer {
+    width: 100%;
+    background: url('/img/bg.png') no-repeat;
+    margin-top: 60rem;
+    display: flex;
+    
+    @include desktop{
+        margin-top: 65rem;
+    }
+    @include tablet{
+        background: $discount;
+        margin-top: 40rem;
+    }
+
+    &__container {
+        width: 100%;
+       
+    }
+    &__promotion {
+        width: 80%;
+        margin: 0 auto;
+        @include flex-gap(20rem);
+        align-items: center;
+        position: relative;
+        top: 15rem;
+        left: 115rem;
+        min-height: 260rem;
+
+        @include desktop{
+            width: 95%;
+            flex-direction: column;
+            gap: 6rem;
+            align-items: flex-start;
+            justify-content: center;
+            top: 8rem;
+            left: 0rem;
+        }
+        @include tablet{
+            min-height: 210rem;
+            top: 2rem;
+            left: 4rem;
+            gap: 15rem;
+        }
+
+        &::after{
+            content: '';
+            background: url('/img/young-mother-playing-with-her-little-baby-bed.png') center / contain no-repeat;
+            width: 345rem;
+            height: 260rem;
+            position: absolute;
+            right: 335rem;
+            bottom: 12rem;
+            overflow: hidden;
+
+            @include desktop{
+                right: 8rem;
+                bottom: 8rem;
+            }
+            @include laptop{
+                right: 0rem;
+            }
+            @include tablet{
+                background: none;
+            }
+        }    
+
+        .promotion__title {
+            width: 23%;
+            color: $white-color;
+            line-height: 28rem;
+
+            @include desktop{
+                margin: 0;
+                width: 45%;
+            }
+            @include laptop{
+                width: 48%;
+            }
+            @include tablet{
+                width: 90%;
+                line-height: 21rem;
+            }
+        }
+        .promotion__form {
+            @include flex-gap(8rem);
+            align-items: center;
+            width: 25%;
+
+            @include desktop{
+                width: 40%;
+            }
+            @include laptop{
+                width: 51%;
+            }
+            @include tablet{
+                width: 74%;
+            }
+            @include mobile{
+                width: 100%;
+            }
+            
+
+            &--text{
+                width: 100%;
+                border: 1rem solid $white-color;
+                border-radius: 10rem;
+                background: rgb(255 255 255 / 15%);
+            }
+        }
+        .promotion__btn {
+            display: inline-flex;
+            border: none;
+            background-color: transparent;
+        }
+    }
+
+
+    //INFO
+
+
+    &__info {
+        width: 100%;
+        background-color: $main-color;
+        position: relative;
+    }
+    .info__container {
+        @include flex-gap(38rem);
+        flex-direction: column;
+        max-width: 1286rem;
+        margin: 0 auto;
+        padding: 60rem 0;
+
+        @include desktop{
+            padding: 0;
+            gap: 10rem;
+        }
+        
+    }
+
+    .info__inner{
+        @include flex-gap(20rem);
+        align-items: center;
+        color: $white-color;
+        justify-content: flex-start;
+
+        @include desktop{
+            flex-direction: column;
+        }
+    }
+
+    .info__box {
+        width: 18.5%;
+        background-color: #AA2B51;
+        border-radius: 20rem;
+        padding: 30rem;
+        margin-right: 80rem;
+
+        @include desktop{
+            width: 100%;
+            margin: 0;
+            border-radius: 0%;
+            padding: 30rem 0rem;
+        }
+        @include tablet{
+            padding: 40rem 0rem;
+        }
+    }
+    .info__contact {
+        font-style: normal;
+        @include flex-gap(14rem);
+        flex-direction: column;
+
+        @include desktop{
+            padding: 12rem 30rem;
+            gap: 13rem;
+        }
+        @include tablet{
+            padding: 6rem 18rem;
+            gap: 15rem;
+        }
+
+        .contact__number {
+            line-height: 22.3rem;
+
+        }
+    
+        .contact__mail, .contact__address{
+            font-family: "Comfortaa Light";
+            font-weight: 300;
+            
+        }
+    
+        .contact__mail {
+            color: $white-color;
+            line-height: 18rem;
+        }
+        .contact__address {
+            line-height: 22rem;
+    
+    
+        }
+        .contact__socials {
+            @include flex-gap(22rem);
+    
+            @include tablet{
+                gap: 28rem;
+            }
+    
+            .socials__link {
+            
+            }
+        }
+
+    }
+    
+    
+    .info__group-menu{
+        @include flex-gap(25rem);
+
+        @include desktop{
+            width: 100%;
+            padding: 20rem 0rem 0rem 0rem;
+            gap: 50rem;
+        }
+        @include tablet{
+            width: 90%;
+            gap: 25rem;
+            flex-direction: column;
+            padding: 24rem 0rem 0rem 35rem;
+            white-space: nowrap;
+        }
+        @include mobile{
+            width: 100%;
+            padding: 24rem 0rem 0rem 0rem;
+            white-space: normal;
+            align-items: center;
+        }
+    }
+    
+    .info__menu {
+        @include flex-gap(5rem);
+        flex-direction: column;
+        padding: 0rem 40rem;
+
+        @include desktop{
+            padding: 0rem 0rem;
+            gap: 0rem;
+
+            &:first-child{
+                padding: 0 0 0 25rem;
+            }
+            
+        }
+        @include tablet{
+            gap: 12rem;
+            width: 96%;
+
+            &:first-child{
+                padding: 0;
+            }
+        }
+    }
+    .menu__title {
+        margin: 0;
+    }
+
+    .menu__entry{
+        @include flex-gap(56rem);
+
+
+        @include desktop{
+            gap: 39rem;
+        }
+        @include tablet{
+            gap: 105rem;
+            width: 90%;
+        }
+        @include mobile{
+            gap: 26rem;
+        }
+    }
+    .menu__list {
+        @include flex-gap(15rem);
+        flex-direction: column;
+        list-style: none;
+        padding: 0;
+
+        @include mobile{
+            width: 100%;
+        }
+    }
+    .menu__item {
+
+        
+    }
+    .menu__item-link {
+        font-family: "Comfortaa Light";
+        text-decoration: none;
+        color: $white-color;
+        font-weight: 300;
+        line-height: 16.73rem;
+    }
+
+    .info__copyright {
+        @include flex-gap(10rem);
+        flex-direction: column;
+
+        @include desktop{
+            padding: 11rem 25rem 40rem 25rem;
+        }
+
+        .copyright__text {
+            color: #F3A8BF;
+            font-size: 14rem;
+            line-height: 15.61rem;
+
+        }
+        .copyright__payments {
+            @include flex-gap(10rem);
+
+
+            .payments__link {
+                width: 60rem;
+                height: 30rem;
+                border-radius: 10rem;
+            }
+        }
+        
+    }
+    
+
+
+
+    
+
+}

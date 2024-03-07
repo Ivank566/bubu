@@ -1,0 +1,305 @@
+@import "./blocks/variables";
+@import "./blocks/mixins";
+
+.header {
+    background-color: $main-color;
+
+
+
+
+
+    &__container {
+        max-width: 1300rem;
+        margin: 0 auto;
+
+        @include desktop{
+            max-width: none;
+            padding: 14rem 30rem;
+        }
+        @include tablet{
+            padding: 20rem 14rem;
+        }
+
+    }
+
+    &__mobile-menu{
+        display: none;
+        background: url('/img/icons/mobile-menu.svg') center / contain no-repeat;
+        width: 30rem;
+        height: 18rem;
+
+        @include desktop{
+            display: block;
+        }
+    }
+
+    &__body {
+        @include flex-gap(28rem);
+        flex-direction: column;
+        padding: 15rem 5rem;
+
+        @include desktop{
+            gap: 0;
+            flex-direction: row;
+            padding: 0;
+        }
+    }
+
+    &__row {
+        @include flex-gap(30rem);
+        justify-content: space-between;
+        align-items: center;
+
+        
+        &--width{
+
+            @include desktop{
+                width: 100%;
+            }
+
+        }
+        .row__container {
+            @include flex-gap(30rem);
+            align-items: center;
+
+            @include tablet{
+                gap: 15rem;
+            }
+        }
+
+        .row__item {
+            @include flex-gap(30rem);
+            width: 100%;
+
+            @include tablet{
+                gap: 20rem;
+                justify-content: flex-end;
+            }
+        }
+    }
+
+    &__logo {
+        background: url("../../img/logo.png") center/contain no-repeat;
+        width: 138rem;
+        height: 32rem;
+
+        @include tablet{
+            width: 96rem;
+            height: 22rem;
+        }
+    }
+
+
+    &__navigation {
+        @include flex-gap(20rem);
+        padding: 0;
+
+        &-list {
+            list-style: none;
+        }
+
+
+        @include desktop{
+            display: none;
+        }
+    }
+
+    &__link {
+        font-size: 14rem;
+        font-weight: 300;
+        color: $white-color;
+        text-decoration: none;
+    }
+
+    &__contact {
+        @include flex-gap(30rem);
+        align-items: center;
+
+        @include desktop{
+            display: none;
+        }
+    }
+
+    .contact {
+
+        &__number {
+            color: $white-color;
+        }
+
+        &__media {
+            @include flex-gap(18rem);
+            align-items: center;
+
+
+
+        }
+
+        &__lang {
+            @include flex-gap(5rem);
+            align-items: center;
+            font-size: 14rem;
+
+            .lang-link {
+                font-weight: 300;
+                color: #FFC5D6;
+
+                &.active {
+                    text-decoration: none;
+                    color: $white-color;
+                }
+            }
+
+            .lang__line {
+                color: #FFEAF1;
+            }
+        }
+
+        &__user {
+            @include flex-gap(10rem);
+            align-items: center;
+
+
+            .user__link {
+                font-size: 14rem;
+                font-weight: 500;
+                color: $white-color;
+            }
+
+        }
+
+    }
+
+
+
+    &__catalog {
+        width: 23%;
+        position: relative;
+        
+        @include desktop{
+            display: none;
+        }
+
+        .catalog {
+            &__container {
+                width: 100%;
+                position: absolute;
+                top: -40rem;
+            }
+
+            &__item {
+                @include flex-gap(10rem);
+                align-items: center;
+                padding: 15rem 30rem;
+                background-color: $lightpurple-color;
+                border: 1rem solid $lightpurple-color;
+                border-radius: 20rem 20rem 0rem 0rem;
+            }
+
+            &__title {
+                text-transform: uppercase;
+            }
+
+        }
+    }
+
+    &__search-form {
+        width: 100%;
+        border: 1rem solid $white-color;
+        border-radius: 10rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: rgb(255 255 255 / 15%);
+
+        @include tablet{
+            width: 10%;
+            border: none;
+            background: transparent;
+        }
+
+        .search-form_txt {
+            border: none;
+            background-color: transparent;
+
+            @include tablet{
+                display: none;
+            }
+        }
+
+        .search-form_btn {
+            border: none;
+            background-color: transparent;
+            padding: 0 10rem;
+        }
+
+    }
+
+    &__filter {
+        @include flex-gap(30rem);
+        align-items: center;
+
+        @include tablet{
+            gap: 30rem;
+        }
+        @include mobile{
+            gap: 15rem;
+        }
+
+        .filter__category {
+            @include flex-gap(7rem);
+            align-items: center;
+
+            
+        }
+
+        .filter__circle {
+            @include svg-icon(21rem, 21rem);
+            background-color: $discount;
+            border-radius: 20rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @include tablet{
+                position: absolute;
+                @include svg-icon(13rem, 13rem);
+                top: 19rem;
+                right: 8rem;
+            }
+            @include mobile{
+                display: none;
+            }
+
+            &::after{
+                content: '1';
+                color: $white-color;
+                font-size: 15rem;
+                font-weight: 700;
+
+                @include tablet{
+                    font-size: 11rem;
+                }
+            }
+
+            @include tablet{
+                .filter__value{
+                    display: block;
+                }
+            }
+        }
+
+        .filter__value {
+            color: $lightpurple-color;
+
+            @include tablet{
+                &:last-child{
+                    display: none;
+                }
+            }
+        }
+
+    }
+
+
+
+}

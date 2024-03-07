@@ -1,0 +1,97 @@
+@import "./blocks/header";
+@import "./blocks/footer";
+@import "./blocks/button";
+@import "./blocks/variables";
+@import "./blocks/mixins";
+@import "./blocks/icons";
+@import "./blocks/product";
+@import "./blocks/product-card";
+
+@font-face {
+    font-family: "Comfortaa Medium";
+    src: url("../fonts/Comfortaa-Medium.ttf");
+  }
+
+@font-face {
+    font-family: "Comfortaa Bold";
+    src: url("../fonts/Comfortaa-Bold.ttf");
+}
+  
+@font-face {
+    font-family: "Comfortaa Light";
+    src: url("../fonts/Comfortaa-Light.ttf");
+}
+
+html {
+    font-size: calc(1vw / 19.2);
+
+
+    @include desktop {
+        font-size: calc(1vw / 10);
+    }
+
+    @include laptop {
+        font-size: calc(1vw / 7.68);
+    }
+
+    @include tablet {
+        font-size: calc(1vw / 5.31);
+    }
+
+    @include mobile {
+        font-size: calc(1vw / 3.85);
+    }
+}
+
+body {
+    width: 100%;
+    font-family: "Comfortaa Medium", sans-serif;
+    font-size: 15rem;
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    font-family: "Comfortaa Bold", sans-serif;
+    font-size: 20rem;
+    font-weight: 700;
+  }
+  
+h2 {
+    font-family: "Comfortaa Medium", sans-serif;
+    font-size: 17rem;
+    font-weight: 500;
+}
+p, span, dl, dt, dd{
+    margin: 0;
+    padding: 0;
+}
+.headline{
+    font-family: "Comfortaa Bold", sans-serif;
+    font-size: 20rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.subtitle{
+    font-family: "Comfortaa Medium", sans-serif;
+    font-size: 17rem;
+    font-weight: 500;
+}
+
+input[type=text]{
+   
+    padding: 12rem;
+    margin: 0;
+    outline: none;
+    
+    @include desktop{
+        padding: 15rem;
+    }
+    
+    &::placeholder {
+        font-family: Comfortaa Light;
+        font-size: 15rem;
+        color: $white-color;
+      }
+}

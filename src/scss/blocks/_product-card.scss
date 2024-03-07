@@ -1,0 +1,153 @@
+.product{
+
+                    &__row,
+                    &__column {
+                        @include flex-gap(30rem);
+
+                        @include desktop{
+                            gap: 32rem;
+                        }
+
+                        @include tablet{
+                            gap: 25rem;
+                        }
+                        
+                    }
+
+                    
+
+                    &__column {
+                        flex-direction: column;
+                        width: 20%;
+
+                        @include desktop{
+                            width: 25%;
+
+                            &:nth-child(n+4){
+                                overflow: hidden;
+                            }
+
+                            &:nth-child(n+4):last-child{
+                                display: none;
+                            }
+                        }
+                        @include laptop{
+                            width: 33%;
+
+                            &:nth-child(n+3){
+                                overflow: hidden;
+                            }
+
+                            &:nth-child(n+4), &:nth-child(n+4):last-child{
+                                display: none;
+                            }
+                        }
+                        @include tablet{
+                            width: 33%;
+                        }
+
+                        @include mobile{
+                            width: 51%;
+
+                            &:nth-child(n+2){
+                                overflow: hidden;
+                            }
+
+                            &:nth-child(n+3), &:nth-child(n+4), &:nth-child(n+4):last-child{
+                                display: none;
+                            }
+                        }
+                    }
+
+                    &__card {
+                        @include flex-gap(10rem);
+                        flex-direction: column;
+                        width: 100%;
+                        position: relative;
+
+                        @include desktop{
+                            gap: 11rem;
+                        }
+                        @include desktop{
+                            gap: 9rem;
+                        }
+                        @include tablet{
+                            gap: 13rem;
+                        }
+
+                        .product__discount {
+                            position: absolute;
+                            top: 8rem;
+                            left: 10rem;
+                            display: inline-block;
+                            background-color: $discount;
+                            padding: 7rem;
+                            border-radius: 5rem;
+
+                            &--text {
+                                font-weight: 500;
+                                color: $white-color;
+                            }
+                        }
+                    }
+
+
+                    &__image-box {
+                        width: 100%;
+
+                        .image-box__item {
+                            width: 232rem;
+                            height: 232rem;
+
+                            @include tablet{
+                                object-fit: contain;
+                                width: 172rem;
+                                height: 172rem;
+                            }
+                        }
+
+                    }
+
+
+                    &__desc {
+                        
+
+                        &--text {
+                            margin: 0;
+                        }
+                    }
+
+
+                    &__price-box {
+                        @include flex-gap(5rem);
+                        align-items: center;
+
+                        @include tablet{
+                            align-items: flex-start;
+                            flex-direction: column;
+                        }
+
+                        .price__original,
+                        .price__discount {
+                            margin: 0;
+                            font-weight: 300;
+
+                            &--value {
+                                font-weight: 700;
+                            }
+                        }
+
+                        .price__original {
+                            color: #202020;
+                            font-size: 14rem;
+                            text-decoration: line-through;
+
+                        }
+
+                        .price__discount {
+                            color: $discount;
+                            font-size: 17rem;
+
+                        }
+                    }
+                }
